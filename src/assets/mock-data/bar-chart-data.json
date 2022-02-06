@@ -1,0 +1,22 @@
+[
+  {
+    "Framework": "Vue",
+    "Stars": "166443"
+  },
+  {
+    "Framework": "React",
+    "Stars": "150793"
+  },
+  {
+    "Framework": "Angular",
+    "Stars": "62342"
+  },
+  {
+    "Framework": "Backbone",
+    "Stars": "27647"
+  },
+  {
+    "Framework": "Ember",
+    "Stars": "21471"
+  }
+]

@@ -1,0 +1,17 @@
+<div class="master-container">
+  <ng-container *ngIf="templates?.length; else loadingTemplate">
+    <strong *ngIf="timer !== -1; else stoppedTemplate" class="timer"> {{ timer }} second(s) remaining</strong>
+    <ng-container *ngFor="let chart of templates">
+      <ng-container *ngTemplateOutlet="chart.template; context: { $implicit: chart.classList}"></ng-container>
+    </ng-container>
+  </ng-container>
+  <button *ngIf="timer !== -1" title="Stop slideshow" aria-label="Stop slideshow" (click)="stopTimer()">Stop slideshow</button>
+</div>
+
+<ng-template #loadingTemplate>
+  Loading...
+</ng-template>
+
+<ng-template #stoppedTemplate>
+  <div class="timer">Slideshow stopped</div>
+</ng-template>
